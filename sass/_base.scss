@@ -45,9 +45,9 @@ body {
     // 8 columns width must be between minimum content and 142.5 px //in short responsive
     // minmax(6rem, 1fr) 60 px would be remain on both side 
 
-    & > * {
-        padding: 40px;
-        font-size: 3rem;
-    }
+    // & > * {
+    //     padding: 40px;
+    //     font-size: 3rem;
+    // }
 
 } 
