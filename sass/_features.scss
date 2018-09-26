@@ -3,6 +3,27 @@
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1));
     grid-gap: 6rem;
+    align-items: start; //get rid of gap between heading and para_text since default it is align-item: stretch
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr; //min-content for svg and 1 fr for heading and para
+    grid-row-gap: 0.6rem;
+    grid-column-gap: 2rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem) // move icon little bit up
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
 }
