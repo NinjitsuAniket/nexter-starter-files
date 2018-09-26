@@ -4,7 +4,7 @@
 
     display: grid;
     // grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
     align-items: start; //get rid of gap between heading and para_text since default it is align-item: stretch
 }
@@ -20,7 +20,7 @@
         width: 4.5rem;
         height: 4.5rem;
         grid-row: 1 / span 2;
-        transform: translateY(-1rem) // move icon little bit up
+        transform: translateY(-1rem); // move icon little bit up
     }
 
     &__text {
