@@ -39,5 +39,15 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 80vh min-content 40vw repeat(3, min-content) ; //min-content row grows with content
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content) ; //80vh for sidebar min-content for header 40vw for realtors min-content for other remaining//min-content row grows with content
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];  //8rem for sidebar and rest repeat for other components
+    //14rem translates to 1140px ie 1140/8 = 142.5 // we shhould have 
+    // 8 columns width must be between minimum content and 142.5 px //in short responsive
+    // minmax(6rem, 1fr) 60 px would be remain on both side 
+
+    & > * {
+        padding: 40px;
+        font-size: 3rem;
+    }
+
 } 
